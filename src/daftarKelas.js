@@ -13,6 +13,24 @@ export const BeritaList = (props) => (
     </List>
 );
 
+export const KelasList = (props) => (
+  <List {...props} title="Daftar Kelas">
+    <Datagrid bodyOptions={{ showRowHover: true }} >
+      <TextField source="namaKelas" label="Kelas" />
+      <EditButton />
+    </Datagrid>
+  </List>
+)
+
+export const KelasCreate = (props) => (
+  <Create {...props}>
+    <SimpleForm>
+      <TextInput style={{ display: 'none' }} source="id" defaultValue={() => randomID()} />
+      <TextInput source="namaKelas" label="Kelas" />
+    </SimpleForm>
+  </Create>
+)
+
 export const CreateBerita = (props) => (
     <Create {...props}>
         <SimpleForm>

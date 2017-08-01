@@ -23,7 +23,7 @@ export const PostList = (props) => (
             <TextField source="Dosen" sortable={false} />
             <TextField source="Hari" sortable={false} />
             <TextField source="JamMulai" label="Jam Mulai" sortable={false} />
-            <TextField source="JamSelesai" sortable={false} />
+            <TextField source="JamSelesai" label="Jam Selesai" sortable={false} />
             <TextField source="Kelas" sortable={false} />
             <TextField source="MataKuliah" sortable={false} />
             <TextField source="Ruang" sortable={false} />
@@ -33,7 +33,7 @@ export const PostList = (props) => (
 );
 
 const NamaMatkul = ({ record }) => {
-  return <span>Post {record ? `"${record.MataKuliah}"` : ''}</span> 
+  return <span>Mata Kuliah {record ? `"${record.MataKuliah}"` : ''}</span> 
 };
 
 export const JadwalEdit = (props) => (

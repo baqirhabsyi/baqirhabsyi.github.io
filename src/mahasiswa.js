@@ -22,7 +22,7 @@ export const MahasiswaList = (props) => (
 )
 
 const MahasiswaTitle = ({ record }) => {
-  return <span>Post {record ? `"${record.nama}"` : ''}</span>
+  return <span>Data {record ? `"${record.nama}"` : ''}</span>
 };
 
 export const MahasiswaEdit = (props) => (
