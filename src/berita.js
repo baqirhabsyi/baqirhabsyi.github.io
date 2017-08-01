@@ -30,3 +30,24 @@ export const CreateBerita = (props) => (
         </SimpleForm>
     </Create>
 )
+
+const NamaBerita = ({ record }) => {
+    return <span>Post { record ? `"${record.judul}"` : '' } </span>
+;}
+
+export const EditBerita = (props) => (
+    <Edit title={<NamaBerita />} {...props}>
+        <SimpleForm>
+            <DateInput source="published_at" title="Tanggal Publikasi" options={{
+                mode: 'landscape',
+                minDate: new Date(),
+                hintText: 'Pilih tanggal publikasi',
+                okLabel: 'OK',
+                cancelLabel: 'Cancel'
+            }} />
+            <TextInput source="judul" title="judul" />
+            <TextInput source="teaser" title="Teaser" />
+            <TextInput source="isi" title="Isi" />
+        </SimpleForm>
+    </Edit>
+);
