@@ -19,7 +19,7 @@ const firebaseConfig = {
   messagingSenderId: "868404744748"
 };
 
-const trackedResources = ['kelas-testing2', 'kompen', 'hari', 'posts', 'pekerjaan'];
+const trackedResources = ['kelas-testing2', 'kompen', 'posts', 'pekerjaan'];
 
 const App = () => (
     <Admin title="Admin Siskominfo Jadwal dan Kompen" restClient={RestClient(trackedResources, firebaseConfig)}>
